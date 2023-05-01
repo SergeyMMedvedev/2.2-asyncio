@@ -1,0 +1,23 @@
+### people
+GET https://swapi.dev/api/people/1/
+Content-Type: application/json
+
+### 
+
+### palnets
+GET https://swapi.dev/api/planets/1/
+Content-Type: application/json
+
+### 
+
+### films
+GET https://swapi.dev/api/films/1/
+Content-Type: application/json
+
+### 
+
+### people
+GET https://swapi.dev/api/people
+Content-Type: application/json
+
+### 
