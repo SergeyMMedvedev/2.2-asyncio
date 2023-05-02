@@ -21,3 +21,9 @@ GET https://swapi.dev/api/people
 Content-Type: application/json
 
 ### 
+
+### starships
+GET https://swapi.dev/api/starships/12/
+Content-Type: application/json
+
+### 

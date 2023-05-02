@@ -1,9 +1,8 @@
 from sqlalchemy import JSON, Column, Integer, String
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm.session import sessionmaker
 from sqlalchemy.future import select
-
+from sqlalchemy.orm.session import sessionmaker
 
 PG_DSN = 'postgresql+asyncpg://user:1234@127.0.0.1:5431/netology'
 engine = create_async_engine(PG_DSN)
@@ -30,7 +29,10 @@ class SwapiPeople(Base):
     name = Column(String)
     skin_color = Column(String)
     species = Column(String)
+    starships = Column(String)
+    vehicles = Column(String)
     url = Column(String)
+
     def __repr__(self):
         return (
             f'id: {self.id}\n'
@@ -45,5 +47,7 @@ class SwapiPeople(Base):
             f'name: {self.name}\n'
             f'skin_color: {self.skin_color}\n'
             f'species: {self.species}\n'
+            f'starships: {self.starships}\n'
+            f'vehicles: {self.vehicles}\n'
             f'url: {self.url}\n'
         )
