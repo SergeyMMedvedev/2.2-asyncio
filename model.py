@@ -1,14 +1,13 @@
-from sqlalchemy import JSON, Column, Integer, String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.future import select
 from sqlalchemy.orm.session import sessionmaker
 
 PG_DSN = 'postgresql+asyncpg://user:1234@127.0.0.1:5431/netology'
 engine = create_async_engine(PG_DSN)
 
 Session = sessionmaker(
-    bind=engine, class_=AsyncSession, expire_on_commit=False
+    bind=engine, class_=AsyncSession, expire_on_commit=False  # type: ignore
 )
 
 Base = declarative_base()

@@ -4,8 +4,9 @@ from typing import AsyncGenerator, Iterable
 
 from aiohttp import ClientSession
 from pydantic import BaseModel
+from sqlalchemy.future import select
 
-from model import Base, Session, SwapiPeople, engine, select
+from model import Base, Session, SwapiPeople, engine
 
 
 class People(BaseModel):
